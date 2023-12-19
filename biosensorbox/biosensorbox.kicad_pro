@@ -45,7 +45,7 @@
         "silk_text_thickness": 0.15,
         "silk_text_upright": false,
         "zones": {
-          "min_clearance": 0.5
+          "min_clearance": 0.0
         }
       },
       "diff_pair_dimensions": [
@@ -53,9 +53,33 @@
           "gap": 0.0,
           "via_gap": 0.0,
           "width": 0.0
+        },
+        {
+          "gap": 0.25,
+          "via_gap": 0.0,
+          "width": 0.375
         }
       ],
-      "drc_exclusions": [],
+      "drc_exclusions": [
+        "silk_edge_clearance|141855000|63500000|79af4dea-c328-46af-b896-db2feee98f04|f33ed993-7ebf-47e9-9a08-85479be88a48",
+        "silk_edge_clearance|159855000|63500000|79af4dea-c328-46af-b896-db2feee98f04|0154daa2-696f-4792-8d76-62ba57847699",
+        "silk_overlap|122917000|76640000|4337debb-ed8b-4b6a-a9a3-865f2b34eee5|0fda8710-b1bc-465e-8cb8-5a7213b953fd",
+        "silk_overlap|122917000|84560000|93dd8b6b-ef8e-40aa-9116-40d5fb76902f|1b2d473b-c2b6-42c4-925f-c9d8acd8f87d",
+        "silk_overlap|125417000|76640000|eddb232b-299f-4049-9998-95a090669d10|0fda8710-b1bc-465e-8cb8-5a7213b953fd",
+        "silk_overlap|125417000|84560000|c575e03b-df72-4afb-9306-8c2c6a41d989|1b2d473b-c2b6-42c4-925f-c9d8acd8f87d",
+        "silk_overlap|128417000|76640000|eddb232b-299f-4049-9998-95a090669d10|85e5e40a-a2be-42c9-9e64-65a730731875",
+        "silk_overlap|128417000|84560000|c575e03b-df72-4afb-9306-8c2c6a41d989|d6398c12-e5dd-4093-bcde-2690d6eae9e1",
+        "silk_overlap|130527000|77200000|210e8c41-d9fa-4347-bc3c-f8856a26482f|85e5e40a-a2be-42c9-9e64-65a730731875",
+        "silk_overlap|130527000|78750000|210e8c41-d9fa-4347-bc3c-f8856a26482f|7d65919c-3f2a-4677-8e0c-5c0245953b7e",
+        "silk_overlap|130527000|82450000|5b723894-c537-4927-8645-eb94b35a1295|dbb94ff6-c2aa-4ee9-bf23-a7bfea89d29b",
+        "silk_overlap|130527000|84000000|5b723894-c537-4927-8645-eb94b35a1295|d6398c12-e5dd-4093-bcde-2690d6eae9e1",
+        "silk_overlap|130917000|78750000|39ec88bc-8680-44a5-a928-e637a829fb7e|7d65919c-3f2a-4677-8e0c-5c0245953b7e",
+        "silk_overlap|130917000|79250000|e4c9c4e1-98d3-4245-86cd-9878a687ed66|7d65919c-3f2a-4677-8e0c-5c0245953b7e",
+        "silk_overlap|139442364|77059200|2c89802c-8a1a-45eb-ae0c-3e4ea69d1396|e43ab8f4-0ace-46d6-aa1f-92b0677945d5",
+        "silk_overlap|139442364|77779200|5dd35969-9491-4437-9e9e-1a430f4de05f|e43ab8f4-0ace-46d6-aa1f-92b0677945d5",
+        "silk_overlap|139658036|77059200|2c89802c-8a1a-45eb-ae0c-3e4ea69d1396|a2de320e-3cba-4cd0-8976-fff5a7dc52d9",
+        "silk_overlap|139658036|77779200|5dd35969-9491-4437-9e9e-1a430f4de05f|a2de320e-3cba-4cd0-8976-fff5a7dc52d9"
+      ],
       "meta": {
         "version": 2
       },
@@ -174,6 +198,8 @@
       "track_widths": [
         0.0,
         0.15,
+        0.2,
+        0.375,
         0.5
       ],
       "via_dimensions": [
@@ -417,7 +443,7 @@
         "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
-        "diff_pair_width": 0.2,
+        "diff_pair_width": 0.375,
         "line_style": 0,
         "microvia_diameter": 0.3,
         "microvia_drill": 0.1,
@@ -441,7 +467,7 @@
         "name": "USB Data",
         "pcb_color": "rgba(0, 0, 0, 0.000)",
         "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.25,
+        "track_width": 0.375,
         "via_diameter": 0.8,
         "via_drill": 0.4,
         "wire_width": 6
@@ -455,11 +481,11 @@
     "netclass_patterns": [
       {
         "netclass": "USB Data",
-        "pattern": "/D+"
+        "pattern": "/D-"
       },
       {
         "netclass": "USB Data",
-        "pattern": "/D-"
+        "pattern": "/D+"
       }
     ]
   },
